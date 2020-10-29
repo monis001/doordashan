@@ -1,22 +1,4 @@
-<mat-toolbar color="primary">
-   <span >Doordashan</span>
-  <span class="example-spacer"></span>
-  <!-- Menu items -->
-  <div style="position: absolute; right: 30px">
-    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
-      <mat-icon>more_vert</mat-icon>
-    </button>
-    <mat-menu #menu="matMenu">
-      <button mat-menu-item>
-        <mat-icon>settings</mat-icon>
-        <span>settings</span>
-      </button>
-    </mat-menu>  
-  </div>
-</mat-toolbar>
-
-<div class="content-area">
-  <!-- <gridster [options]="options">
+ <gridster [options]="options">
     <gridster-item *ngFor="let item of layout" [item]="item">
       <div class="content-container">
         <div class="btn-container">
@@ -31,15 +13,10 @@
         </div>
       </div>
     </gridster-item>
-  </gridster> -->
+  </gridster>
 
+  
 
-  <app-dashboard-list></app-dashboard-list>
-</div>
-
-
-
-<!-- 
 <button mat-fab color="primary" aria-label="Add widget" class="sticky" (click)="layoutService.addItem()">
   <mat-icon>add</mat-icon>
-</button> -->
+</button>

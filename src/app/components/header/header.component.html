@@ -1,0 +1,16 @@
+<mat-toolbar color="primary">
+    <span >Doordashan</span>
+   <span class="example-spacer"></span>
+   <!-- Menu items -->
+   <div style="position: absolute; right: 30px">
+     <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+       <mat-icon>more_vert</mat-icon>
+     </button>
+     <mat-menu #menu="matMenu">
+       <button mat-menu-item>
+         <mat-icon>settings</mat-icon>
+         <span>settings</span>
+       </button>
+     </mat-menu>  
+   </div>
+ </mat-toolbar>

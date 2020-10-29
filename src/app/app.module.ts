@@ -14,12 +14,22 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { WidgetSettingsComponent } from './components/widget-settings/widget-settings.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatMenuModule} from '@angular/material/menu';
+import { HeaderComponent } from './components/header/header.component';
+import { DashboardListComponent } from '../app/modules/dashboard/dashboard-list/dashboard-list.component' ;
+import { DashboardCreateComponent } from '../app/modules/dashboard/dashboard-create/dashboard-create.component' ;
+import {MatTableModule} from '@angular/material/table';
+const routes = [
+  // {  id:'list',  }
+]
 
 @NgModule({
   declarations: [
     AppComponent,
     LayoutComponent,
     WidgetSettingsComponent,
+    DashboardListComponent,
+    DashboardCreateComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
@@ -31,7 +41,8 @@ import {MatMenuModule} from '@angular/material/menu';
     MatIconModule,
     MatDialogModule,
     MatToolbarModule,
-    MatMenuModule
+    MatMenuModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -14,19 +14,6 @@ export class HttpService {
   }
 
 
-  async hit(method: string, url: string, body?, queryParams = {}, headers: Array<{ headerName: string, headerValue: string }> = null, baseUrl?) {
-    switch (method.toUpperCase()) {
-      case 'DELETE':
-        return this.delete(url, body, queryParams, headers, baseUrl);
-      case 'POST':
-        return this.post(url, body, queryParams, headers, baseUrl);
-      case 'PUT':
-        return this.put(url, body, queryParams, headers, baseUrl);
-      case 'GET':
-        return this.get(url, queryParams, headers, baseUrl);
-    }
-  }
-
   /**
    *
    * @param url : api path
@@ -35,7 +22,6 @@ export class HttpService {
    * @param baseUrl : any other different baseURL
    */
   get(url: string, queryParams?: any, headers: Array<{ headerName: string, headerValue: string }> = null, baseUrl?) {
-    // debugger
     const customHeaders = this.prepareHTTPUrlWithConfig(url, queryParams, headers, baseUrl);
     return this.http.get(this.finalURL, { headers: customHeaders }).toPromise();
   }
